@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+  web:
+    build:
+      context: ./php
+      dockerfile: Dockerfile
+    container_name: college
+    depends_on:
+     - db
+    volumes:
+     - ./php:/var/www/html/
+     - ./php/php.ini:/usr/local/etc/php/conf.d/php.ini
+    ports:
+     - 8000:80
+  db:
+    container_name: mysql1
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD : rootpassword
+      MYSQL_DATABASE : trial2
+      MYSQL_USER: root
+    ports:
+     - 6033:3306
+
+      
