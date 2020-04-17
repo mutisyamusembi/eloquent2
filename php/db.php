@@ -9,7 +9,7 @@ $capsule->addConnection([
     'host'      => 'db',
     'database'  => 'trial2',
     'username'  => 'root',
-    'password'  => 'rootpassword',
+    'password'  => '',
     'charset'   => 'utf8',
     'collation' => 'utf8_unicode_ci',
     'prefix'    => '',

@@ -4,7 +4,7 @@
         "illuminate/events": "^7.5"
     },
     "autoload": {
-    	"files": ["db.php","model.php"]
+    	"files": ["db.php","model.php","table.php"]
     }
 
 }
