@@ -9,6 +9,6 @@ return array(
     '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
     '0d59ee240a4cd96ddbb4ff164fccea4d' => $vendorDir . '/symfony/polyfill-php73/bootstrap.php',
     '72579e7bd17821bb1321b87411366eae' => $vendorDir . '/illuminate/support/helpers.php',
-    'c2f08998e6b69081864366337527ba6f' => $baseDir . '/db.php',
-    '8cdea206eff417cf1ebb3f63c51c589b' => $baseDir . '/model.php',
+    '807c7a7676ea621faee61a845ed542a4' => '/var/www/html/db.php',
+    'bbe4e6222333e76aef72c2fbdd3dd09b' => '/var/www/html/model.php',
 );

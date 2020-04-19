@@ -2,26 +2,32 @@ version: '3.3'
 services:
   web:
     build:
-      context: ./php
+      context: .
       dockerfile: Dockerfile
     container_name: college
     depends_on:
      - db
     volumes:
-     - ./php:/var/www/html/
-     - ./php/php.ini:/usr/local/etc/php/conf.d/php.ini
-     - ./php/php_pdo_mysql.dll:/usr/local/etc/php/ext/php_pdo_mysql.dll
+    - .:/var/www/html
     ports:
      - 8000:80
   db:
     container_name: mysql1
-    image: mysql:8.0
-   
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
     ports:
      - 6033:3306
   admin:    
-    image: adminer    
+    image: adminer
     ports:      
       - 8080:8080
+  composer:
+    restart: 'no'
+    image: composer
+    command: install
+    volumes:
+    - .:/app
 
       
